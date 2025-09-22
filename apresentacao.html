@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: A Cidade que te Reconhece</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        #slides-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out; /* Transição suave */
+            z-index: 1;
+        }
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        #progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 8px;
+            background-color: #3b82f6; /* Azul */
+            width: 0%;
+            transition: width 0.3s ease-out;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-hidden">
+
+    <div id="slides-container">
+        <!-- Slide 1: Título -->
+        <div class="slide active flex-col justify-center items-center text-center p-8 bg-gray-900">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl font-bold text-blue-400 mb-4">A Cidade que te Reconhece</h1>
+                <h2 class="text-3xl font-light text-gray-300">Construindo o Futuro de Colatina com IA</h2>
+                <div class="mt-12 text-xl text-gray-400">
+                    <p class="mb-2"><span class="font-bold">Apresentado por:</span> Professor: Me. Guilherme Schultz Netto e Alunos: Nome 1, Nome2, Nome3, etc.</p>
+                    <p class="mb-2"><span class="font-bold">Instituição:</span> Colégio Marista Colatina</p>
+                    <p><span class="font-bold">Data:</span> 23-24 de Setembro de 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: O Desafio -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-800">
+            <div class="max-w-4xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-300">O Desafio das Cidades Modernas</h2>
+                <ul class="space-y-6 text-2xl text-gray-200">
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Segurança:</strong> Como tornar os espaços públicos mais seguros de forma eficiente?</li>
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Eficiência:</strong> Como agilizar o acesso a serviços públicos e eventos?</li>
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Personalização:</strong> Como oferecer uma experiência única e acolhedora?</li>
+                </ul>
+                <p class="mt-10 text-center text-2xl text-blue-200">A resposta está em usar a tecnologia para tornar a cidade mais <strong>inteligente</strong> e <strong>humana</strong>.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Proposta -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-900">
+            <div class="max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-8 text-blue-300">Nossa Proposta: Assistente Facial Inteligente</h2>
+                <div class="text-left space-y-4 text-xl bg-gray-800 p-8 rounded-lg shadow-2xl">
+                    <p><strong class="text-blue-400">O que é?</strong> Um software que não só reconhece pessoas, mas também interage com elas usando IA.</p>
+                    <p><strong class="text-blue-400">Como funciona?</strong> Ele combina reconhecimento facial dinâmico com o poder de um modelo de linguagem avançado.</p>
+                    <div>
+                        <strong class="text-blue-400">Tecnologias Utilizadas:</strong>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li>Linguagem: Python</li>
+                            <li>Visão Computacional: OpenCV e `face_recognition`</li>
+                            <li>Interface Gráfica: Tkinter</li>
+                            <li class="font-bold text-yellow-300">Inteligência Artificial: Google Gemini API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Demonstração -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-800">
+            <div class="max-w-4xl w-full">
+                <h2 class="text-5xl font-bold text-center mb-12 text-blue-300">Demonstração ao Vivo</h2>
+                <ol class="list-decimal list-inside space-y-8 text-2xl text-gray-200">
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Reconhecimento e Saudação:</strong> O sistema identifica uma pessoa cadastrada e a IA gera uma saudação personalizada sobre a feira.</li>
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Cadastro Dinâmico:</strong> Cadastramos um voluntário da plateia com apenas um clique.</li>
+                    <li class="bg-gray-700 p-6 rounded-lg shadow-lg"><strong>Conversa Inteligente:</strong> O voluntário (ou qualquer pessoa) pode agora conversar com o assistente e tirar dúvidas sobre o evento.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- NOVO Slide 5: O Poder do Diálogo -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-900">
+            <div class="max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-8 text-blue-300">O Poder do Diálogo Inteligente</h2>
+                 <p class="text-xl mb-8 text-gray-300">Levamos o reconhecimento para o próximo nível com a API do Gemini.</p>
+                <div class="text-left space-y-4 text-xl bg-gray-800 p-8 rounded-lg shadow-2xl">
+                    <p>💬 Ao reconhecer uma pessoa, o nosso assistente cria uma <strong>saudação personalizada</strong> sobre a feira, tornando a recepção mais calorosa e humana.</p>
+                    <p>❓ Qualquer visitante pode <strong>conversar com o assistente</strong> e tirar dúvidas sobre o evento, como horários, palestrantes e atrações.</p>
+                    <p>💡 Isso transforma um simples sistema de identificação num verdadeiro <strong>ponto de informação inteligente e interativo</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Como Funciona -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-800">
+             <div class="max-w-4xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-300">Como a "Mágica" Funciona?</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-lg">
+                    <div class="bg-gray-700 p-6 rounded-lg"><strong>1. Detecção:</strong> Encontra o rosto na imagem.</div>
+                    <div class="bg-gray-700 p-6 rounded-lg"><strong>2. Codificação:</strong> Transforma o rosto numa "impressão digital" facial única.</div>
+                    <div class="bg-gray-700 p-6 rounded-lg"><strong>3. Comparação:</strong> Compara a "impressão digital" com a nossa base de dados.</div>
+                    <div class="bg-gray-700 p-6 rounded-lg text-yellow-300"><strong>4. Interação (Gemini):</strong> Se o rosto é conhecido, gera uma saudação. Se não, aguarda perguntas.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Aplicações -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-900">
+            <div class="max-w-6xl w-full">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-300">Aplicações para uma Colatina Inteligente</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-200">Segurança Pública</h3>
+                        <p>Controle de acesso e monitoramento eficiente.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-200">Serviços ao Cidadão</h3>
+                        <p>Check-in automático e agilização de atendimentos.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-200">Turismo e Comércio</h3>
+                        <p>Experiências personalizadas e pagamentos ágeis.</p>
+                    </div>
+                     <div class="bg-blue-900 p-6 rounded-lg border-2 border-yellow-300">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-200">Assistentes Virtuais</h3>
+                        <p>Quiosques interativos que dialogam e fornecem informações.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Ética -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-800">
+            <div class="max-w-4xl w-full">
+                 <h2 class="text-4xl font-bold text-center mb-10 text-blue-300">Ética e Responsabilidade</h2>
+                 <p class="text-center text-xl mb-8 text-gray-300">Uma grande inovação exige uma grande responsabilidade.</p>
+                <ul class="space-y-4 text-lg">
+                    <li class="bg-gray-700 p-4 rounded-lg"><strong>Privacidade:</strong> Como garantir que os dados faciais dos cidadãos sejam armazenados com segurança?</li>
+                    <li class="bg-gray-700 p-4 rounded-lg"><strong>Precisão e Vieses:</strong> É fundamental que os algoritmos sejam justos e funcionem bem para todos.</li>
+                    <li class="bg-gray-700 p-4 rounded-lg"><strong>Legislação:</strong> A tecnologia avança rápido, e as leis precisam acompanhar para proteger os direitos de todos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 9: Conclusão -->
+        <div class="slide flex-col justify-center items-center p-8 bg-gray-900">
+            <div class="max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-8 text-blue-300">Conclusão e Próximos Passos</h2>
+                <p class="text-xl mb-8 text-gray-200">O reconhecimento facial, combinado com IA generativa, é uma ferramenta poderosa para transformar as nossas cidades.</p>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-200">O que vem a seguir?</h3>
+                    <ul class="list-disc list-inside inline-block text-left text-lg">
+                        <li>Integrar com uma base de dados mais robusta.</li>
+                        <li>Adicionar análise de emoções ou contagem de pessoas.</li>
+                        <li>Otimizar para rodar em hardware mais simples.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 10: Agradecimentos -->
+        <div class="slide flex-col justify-center items-center text-center p-8 bg-gray-800">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl font-bold text-blue-400 mb-8">Obrigado!</h1>
+                <h2 class="text-4xl font-light text-gray-300 mb-12">Dúvidas?</h2>
+                <div class="text-xl text-gray-400">
+                    <p class="mb-2">Professor: Me. Guilherme Schultz Netto e Alunos: Nome 1, Nome2, Nome3, etc.</p>
+                    <p>Colégio Marista Colatina</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navegação e Contador -->
+    <div class="fixed bottom-5 right-5 flex items-center space-x-3 z-50">
+        <span id="slide-counter" class="text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded-full">1 / 10</span>
+        <button id="prevBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-opacity duration-300 opacity-50 hover:opacity-100">←</button>
+        <button id="nextBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-opacity duration-300 opacity-50 hover:opacity-100">→</button>
+    </div>
+
+    <div id="progress-bar"></div>
+
+    <script>
+        // --- Seleção dos Elementos ---
+        const slides = document.querySelectorAll('.slide');
+        const slideCounter = document.getElementById('slide-counter');
+        const progressBar = document.getElementById('progress-bar'); // Correção do erro
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        // --- Variáveis de Controlo ---
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+        let slideInterval; // Para guardar a referência do nosso temporizador
+
+        // --- Funções ---
+        function showSlide(index) {
+            slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+            updateProgress();
+            updateCounter();
+        }
+        
+        function nextSlide() { 
+            currentSlide = (currentSlide + 1) % totalSlides; 
+            showSlide(currentSlide); 
+            resetInterval(); // Reinicia o temporizador após a ação
+        }
+
+        function prevSlide() { 
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; 
+            showSlide(currentSlide); 
+            resetInterval(); // Reinicia o temporizador após a ação
+        }
+
+        function updateProgress() { 
+            progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`; 
+        }
+
+        function updateCounter() { 
+            slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`; 
+        }
+
+        // Função para iniciar e reiniciar o temporizador de transição automática
+        function resetInterval() {
+            clearInterval(slideInterval); // Limpa o temporizador anterior
+            slideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }, 10000); // Passa para o próximo slide a cada 10 segundos
+        }
+
+        // --- Event Listeners ---
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            else if (e.key === 'ArrowLeft') prevSlide();
+        });
+        
+        // --- Inicialização ---
+        showSlide(currentSlide);
+        resetInterval(); // Inicia a transição automática
+    </script>
+</body>
+</html>
+
